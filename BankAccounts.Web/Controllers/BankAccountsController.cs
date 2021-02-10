@@ -19,7 +19,7 @@ namespace BankAccounts.Web.Controllers
             this.bankAccountService = bankAccountService;
         }
         [HttpGet]
-        public IActionResult Index(string search, string searchField, string orderBy, string sortOrder, int pageNumber = 1, int pageSize = 2) 
+        public IActionResult Index(string search, string searchField, string orderBy, string sortOrder, int pageNumber = 1, int pageSize = 10) 
         {
             return Ok(bankAccountService.GetBankAccountsList(search, searchField, orderBy, sortOrder, pageNumber, pageSize));
         }
